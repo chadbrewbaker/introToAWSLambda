@@ -81,7 +81,7 @@ strip hello
 du -h hello
 ```
 
-Fast Fibbonaci
+#Fast Fibbonaci
 *Take Fib Finite State Automata where 'a' may not repeat: ()|a,b|ab,bb|,|aba,abb,bba,bbb|
 *Take that adjacency matrix and take it to the nth power with binary doubling
 *Use GNU MP for large Integers
