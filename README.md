@@ -41,16 +41,23 @@ exports.handler = function(event, context) {
 };
 ```
 
-event is the JSON we pass our AWS Lambda function. 
-```javascript
-exports.handler = function(event, context) {
-  // Get the object from the S3 event and show its content type
-  var s3obj = event.Records[0].s3;
-  var params = {
-      Bucket: s3obj.bucket.name,
-      Key: s3obj.object.key
- }
+* event is the JSON we pass our AWS Lambda function. 
+* Usually call your main handler file index.js
+
+```bash
+#Don't do this
+zip -r mylamda.zip mylambda
+#Do this
+cd mylambda
+zip -r mylambda.zip ./*
 ```
+
+I build my lambdas on ec2 then copy them to my box before uploading
+```bash
+ scp -i "apair.pem" ec2-user@54.56.333.229:mylambda.zip mylambda.zip
+```
+
+
 
 //into Gateway -> Lambda -> DB https://snowulf.com/2015/08/05/tutorial-aws-api-gateway-to-lambda-to-dynamodb/
 
@@ -75,33 +82,27 @@ $aws lambda invoke
 * Compiling for Lambda
 Set up an EC2 instance on AWS Linux
 Generate a key pair so you can ssh into it
+For C++/Haskell download/build static libraries to link with
+[See stack discussion](https://github.com/commercialhaskell/stack/issues/1032)
 
-My snippets from my bash history, should clean this up: 
 
 ```bash
 sudo yum update
-sudo yum install libgmp
-sudo yum install gmp
-sudo yum install gmp-dev
-sudo yum install ghc
-sudo yum install cabal
-sudo yum install gmp-5
-sudo yum install gmp-4.3.2 
-curl -sSL https://s3.amazonaws.com/download.fpcomplete.com/centos/7/fpco.repo | sudo tee /etc/yum.repos.d/fpco.repo
-sudo yum -y install stack
-stack setup
+sudo yum install nodejs npm --enablerepo=epel
 ```
 
 ```bash
-stack ghc hello.hs 
+ghc hello.hs 
 ./hello 
 du -h hello
 strip hello
 du -h hello
 
-stack ghc -O2 FastFib.hs -o FastFib
-strip FastFib
+ghc -O2 FastFib.hs -o FastFib
 ```
+
+
+
 
 * API Gateway trigger for AWS Lambda
 
