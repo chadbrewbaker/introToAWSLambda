@@ -2,6 +2,10 @@
 Introduction to AWS Lambda
 
 # What is Lambda
+* 60 seconds or less
+* NodeJS, Java8, Bash, Awk, Python2.7, or static binary
+* More RAM = more CPU slice
+* Around 100 concurrent jobs allowed
 
 # The Lambda environment
 
