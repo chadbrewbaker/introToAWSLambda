@@ -57,33 +57,11 @@ I build my lambdas on ec2 then copy them to my box before uploading
  scp -i "apair.pem" ec2-user@54.56.333.229:mylambda.zip mylambda.zip
 ```
 
-
-
-//into Gateway -> Lambda -> DB https://snowulf.com/2015/08/05/tutorial-aws-api-gateway-to-lambda-to-dynamodb/
-
-$ aws lambda invoke \
---invocation-type RequestResponse \
---function-name helloworld \
---region us-west-2 \
---log-type Tail \
---payload '{"key1":"value1", "key2":"value2", "key3":"value3"}' \
---profile adminuser \
-outputfile.txt 
-If you want you can save the payload to a file (say "input.txt") and provide the file name as a parameter.
-
-$aws lambda invoke
---function-name somefunction
---payload file://input.txt  //Give it a file as a payload
---payload 'Give the lambda func a string'    //AWS Java funcs must have a fromstring method
-
-
-
-
-* Compiling for Lambda
-Set up an EC2 instance on AWS Linux
-Generate a key pair so you can ssh into it
-For C++/Haskell download/build static libraries to link with
-[See stack discussion](https://github.com/commercialhaskell/stack/issues/1032)
+# Compiling for Lambda
+*Set up an EC2 instance on AWS Linux
+*Generate a key pair so you can ssh into it
+*For C++/Haskell download/build static libraries to link with
+*[See stack discussion](https://github.com/commercialhaskell/stack/issues/1032)
 
 
 ```bash
@@ -98,13 +76,12 @@ du -h hello
 strip hello
 du -h hello
 
-ghc -O2 FastFib.hs -o FastFib
+ghc FastFib.hs -O2 -o FastFib -threaded -static -optl-static
 ```
 
 
 
-
-* API Gateway trigger for AWS Lambda
-
-
-
+# API Gateway trigger for AWS Lambda
+```bash
+curl -H "Content-Type: application/json" -X POST -d "{\"key1\": \"30\"}" https://pekdudne7d.execute-api.us-east-1.amazonaws.com/prod
+```
