@@ -1,9 +1,9 @@
 # introToAWSLambda
 Introduction to AWS Lambda
 
-* What is Lambda
+# What is Lambda
 
-* The Lambda environment
+# The Lambda environment
 
 See [LambdaSh] (https://github.com/alestic/lambdash) if you want to explore the AWS Lambda environment with interactive shell commands.
 
@@ -52,7 +52,7 @@ exports.handler = function(event, context) {
  }
 ```
 
-#into Gateway -> Lambda -> DB https://snowulf.com/2015/08/05/tutorial-aws-api-gateway-to-lambda-to-dynamodb/
+//into Gateway -> Lambda -> DB https://snowulf.com/2015/08/05/tutorial-aws-api-gateway-to-lambda-to-dynamodb/
 
 $ aws lambda invoke \
 --invocation-type RequestResponse \
