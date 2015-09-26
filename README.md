@@ -69,6 +69,8 @@ I build my lambdas on ec2 then copy them to my box before uploading
 
 *For C++/Haskell download/build static libraries to link with
 
+* Use the ldd command to find your grocery list of static libraries. Example: ldd a.out
+
 *[See stack discussion](https://github.com/commercialhaskell/stack/issues/1032)
 
 
