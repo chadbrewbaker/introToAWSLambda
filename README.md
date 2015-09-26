@@ -84,7 +84,8 @@ du -h hello
 ```
 
 #Fast Fibbonaci
-* Take Fib Finite State Automata where 'a' may not repeat: ()|a,b|ab,bb|,|aba,abb,bba,bbb|
+* Take Fib Finite State Automata where 'b' may not repeat and each word must start 'a' and end 'a': 
+* ()|a|aa|aba,aba|aaaa,aaba,abaa|aaaaa,aaaba,aabaa,abaaa,ababa|...  
 
 * Take that adjacency matrix and take it to the nth power with binary doubling
 
