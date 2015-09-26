@@ -63,15 +63,15 @@ I build my lambdas on ec2 then copy them to my box before uploading
 ```
 
 # Compiling for Lambda
-*Set up an EC2 instance on AWS Linux
+* Set up an EC2 instance on AWS Linux
 
-*Generate a key pair so you can ssh into it
+* Generate a key pair so you can ssh into it
 
-*For C++/Haskell download/build static libraries to link with
+* For C++/Haskell download/build static libraries to link with
 
 * Use the ldd command to find your grocery list of static libraries. Example: ldd a.out
 
-*[See stack discussion](https://github.com/commercialhaskell/stack/issues/1032)
+* [See stack discussion](https://github.com/commercialhaskell/stack/issues/1032)
 
 
 ```bash
@@ -88,15 +88,15 @@ du -h hello
 ```
 
 #Fast Fibbonaci
-*Take Fib Finite State Automata where 'a' may not repeat: ()|a,b|ab,bb|,|aba,abb,bba,bbb|
+* Take Fib Finite State Automata where 'a' may not repeat: ()|a,b|ab,bb|,|aba,abb,bba,bbb|
 
-*Take that adjacency matrix and take it to the nth power with binary doubling
+* Take that adjacency matrix and take it to the nth power with binary doubling
 
-*Use GNU MP for large Integers
+* Use GNU MP for large Integers
 
-*The i,j entry is now words of length n that start at letter i and end at letter b
+* The i,j entry is now words of length n that start at letter i and end at letter b
 
-*Optimize: 0 x thing = 0; 1 x thing = thing 
+* Optimize: 0 x thing = 0; 1 x thing = thing 
 
 ```haskell
 import System.Environment
