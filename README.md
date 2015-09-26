@@ -94,7 +94,7 @@ du -h hello
 
 * Use GNU MP for large Integers
 
-* The i,j entry is now words of length n that start at letter i and end at letter b
+* The i,j entry is now words of length n that start at letter i and end at letter j
 
 * Optimize: 0 x thing = 0; 1 x thing = thing 
 
