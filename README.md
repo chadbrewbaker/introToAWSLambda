@@ -1,4 +1,4 @@
-# introToAWSLambda
+#introToAWSLambda
 Introduction to AWS Lambda
 
 # What is Lambda
@@ -64,8 +64,11 @@ I build my lambdas on ec2 then copy them to my box before uploading
 
 # Compiling for Lambda
 *Set up an EC2 instance on AWS Linux
+
 *Generate a key pair so you can ssh into it
+
 *For C++/Haskell download/build static libraries to link with
+
 *[See stack discussion](https://github.com/commercialhaskell/stack/issues/1032)
 
 
