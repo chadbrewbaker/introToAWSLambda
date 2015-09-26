@@ -33,13 +33,14 @@ $ cat yankee.txt | ./wordFreq.sh
 6093 the
 ```
 
-
-Hello world lambda function
+Our wordfreq lambda function:
 ```javascript
+console.log('Loading function');
+
 var exec = require('child_process').exec;
 
 exports.handler = function(event, context) {
-    exec('echo Hello World', function(error, stdout) {
+ exec('echo '+ event.key1 + '| sh ./wordFreq.sh', function(error, stdout) {
         context.done(error, stdout);
     });
 };
@@ -116,15 +117,26 @@ main = do
 
 ```
 
-
-
 ```bash
 ghc FastFib.hs -O2 -o FastFib -threaded -static -optl-static
+strip FastFib
 ```
 
+```javascript
+console.log('Loading function');
 
+var exec = require('child_process').exec;
+
+exports.handler = function(event, context) {
+ exec('./FastFib '+ event.key1 , function(error, stdout) {
+        context.done(error, stdout);
+    });
+};
+```
 
 # API Gateway trigger for AWS Lambda
 ```bash
 curl -H "Content-Type: application/json" -X POST -d "{\"key1\": \"30\"}" https://pekdudne7d.execute-api.us-east-1.amazonaws.com/prod
 ```
+
+The two zip files have been precompiled on AWS Linux. Enjoy.
