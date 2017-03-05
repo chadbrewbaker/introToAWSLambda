@@ -1,5 +1,5 @@
 #!/bin/bash
 echo Build started on `date`
-yum install -y clang
+yum install -v -y clang
 clang -v
-ldd /usr/bin/clang
+#ldd /usr/bin/clang
