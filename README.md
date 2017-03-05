@@ -142,3 +142,12 @@ curl -H "Content-Type: application/json" -X POST -d "{\"key1\": \"30\"}" https:/
 ```
 
 The two zip files have been precompiled on AWS Linux. Enjoy.
+
+
+## Update
+I now compile locally using the lambci/lambda Docker container. To move files out use:
+```bash
+docker cp <containerId>:/file/path/within/container /host/path/target
+```
+
+
