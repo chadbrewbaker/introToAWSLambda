@@ -20,6 +20,7 @@ mkdir clangOnLambda
 mv *.dif ./clangOnLambda/
 
 tar -c clangOnLambda > clangOnLambda.tar
+zip clangOnLambda.zip clangOnLambda.tar
 
 #clang -v
 

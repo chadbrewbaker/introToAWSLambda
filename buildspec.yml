@@ -16,4 +16,4 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - clangOnLambda.tar
+    - clangOnLambda.zip
