@@ -1,0 +1,12 @@
+
+(Done) Spin up an awslinux Docker and install clang.
+
+Do a difference of libraries installed by clang.
+
+Collect them into an S3 bucket.
+
+Unpack them in an AWS Lambda function to compile a hello world.
+
+Compile a dynamic libary function with entrypoint lambda_function(size_t * args, size_t argc)
+
+
